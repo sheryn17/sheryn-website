@@ -1,28 +1,28 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     padding: 15px;
     background-color: #000; 
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .container .box {
-    background-color: #1a0000; 
-    color: #ff3b3b;            
+    background-color: #1a1a1a; 
+    color: #fff;              
     padding: 15px;
     font-size: 25px;
     text-align: center;
     border-radius: 12px;
-    border: 2px solid #ff0000;
-    box-shadow: 0 3px 15px rgba(255, 0, 0, 0.4);
+    border: 1px solid #444;    
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .container .box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
 }
 
 .container .box img {
@@ -30,4 +30,5 @@
     height: auto;
     border-radius: 10px;
 }
+
 

@@ -1,14 +1,26 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: dodgerblue;
-  padding: 5px;
-  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(to right, #1e90ff, #4aa3ff);
+  border-radius: 10px;
 }
+
 .container div {
-  background-color: #f1f1f1;
-  color: #000;
-  padding: 10px;
-  font-size: 30px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  font-size: 20px;
   text-align: center;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

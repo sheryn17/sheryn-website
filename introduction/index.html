@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Sheryn Mae Abril - Portfolio</title>
   <meta charset="utf-8">
@@ -7,230 +8,249 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <style>
 
-    /* ====== HACKER DARK THEME ====== */
     body {
       background-color: #050505;
       color: #d6d6d6;
       font-family: "Poppins", sans-serif;
       scroll-behavior: smooth;
-      position: relative;
       overflow-x: hidden;
+      position: relative;
     }
 
-    /* Subtle scanlines hacker vibe */
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       background-image: linear-gradient(
-        rgba(255,0,0,0.04) 1px,
-        transparent 1px
-      );
+          rgba(255, 0, 0, 0.05) 1px,
+          transparent 1px
+        );
       background-size: 100% 3px;
-      z-index: 1;
-      opacity: 0.25;
+      z-index: 2;
     }
 
-    /* ====== RED NEON ACCENT ====== */
     .neon-accent {
       color: #ff0033;
-      text-shadow: 0 0 7px #ff0033, 0 0 15px #ff0033;
+      text-shadow: 0 0 8px #ff0033, 0 0 20px #ff0033;
     }
 
-    header {
-      background: #0a0a0a;
-      border-bottom: 1px solid #1a1a1a;
-      animation: fadeDown 1.2s ease-out forwards;
-      box-shadow: 0 0 20px rgba(255,0,50,0.2);
+    .section-title {
+      border-left: 4px solid #ff0033;
+      padding-left: 12px;
+      text-shadow: 0 0 8px #ff0033;
+      letter-spacing: 1px;
     }
 
-    /* Red glowing profile frame */
     .profile-img {
-      width: 260px;
-      border-radius: 20px;
+      width: 100%;
+      max-width: 250px;
+      border-radius: 16px;
       border: 2px solid #ff0033;
-      box-shadow: 0 0 18px rgba(255, 0, 50, 0.4);
+      box-shadow: 0 0 18px rgba(255, 0, 50, 0.45);
       transition: 0.4s;
     }
 
     .profile-img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 28px rgba(255, 0, 50, 0.75);
+      box-shadow: 0 0 30px rgba(255, 0, 50, 0.85);
     }
 
-    /* ====== ANIMATIONS ====== */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-25px); }
-      to { opacity: 1; transform: translateY(0); }
+    .portfolio-card {
+      background: #0e0e0e;
+      border: 1px solid #2a0000;
+      box-shadow: 0 0 10px rgba(255, 0, 40, 0.2);
+      transition: 0.35s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      border-color: #ff0033;
+      box-shadow: 0 0 25px rgba(255, 0, 60, 0.5);
+    }
+
+    .gallery-img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 15px;
+      border: 2px solid #ff0033;
+      box-shadow: 0 0 25px rgba(255, 0, 60, 0.35);
     }
 
     .fade-section {
       opacity: 0;
-      transform: translateY(35px);
-      transition: all 0.7s ease;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
     }
+
     .fade-section.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* ====== CYBERPUNK CARDS ====== */
-    .portfolio-card {
-      padding: 25px;
-      border-radius: 15px;
-      background: #0f0f0f;
-      border: 1px solid #2a0000;
-      transition: 0.35s ease;
-      box-shadow: 0 0 10px rgba(255,0,40,0.15);
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-10px);
-      border-color: #ff0033;
-      box-shadow: 0 0 25px rgba(255, 0, 60, 0.5);
-    }
-
-    /* Section titles */
-    .section-title {
-      font-weight: 600;
-      margin-bottom: 18px;
-      border-left: 4px solid #ff0033;
-      padding-left: 12px;
-      text-shadow: 0 0 7px #ff0033;
-      letter-spacing: 1px;
-    }
-
-    /* GALLERY IMAGE */
-    .gallery-img {
-      width: 100%;
-      max-width: 420px;
-      border-radius: 14px;
-      border: 2px solid #ff0033;
-      box-shadow: 0 0 18px rgba(255, 0, 50, 0.35);
-      transition: 0.4s;
-    }
-
-    .gallery-img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px rgba(255, 0, 50, 0.6);
-    }
-
-    /* LINKS */
-    a {
-      color: #ff0033;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    a:hover {
-      color: white;
-      text-shadow: 0 0 10px #ff0033;
-    }
-
-    /* Glitch hover text effect */
-    .glitch {
-      position: relative;
-      display: inline-block;
-    }
-
     .glitch:hover {
-      animation: glitchEffect 0.2s steps(2, end) infinite;
+      animation: glitch 0.2s steps(2, end) infinite;
     }
 
-    @keyframes glitchEffect {
-      0% { transform: skew(0.5deg); text-shadow: -1px 0 red; }
-      50% { transform: skew(-1deg); text-shadow: 1px 0 #ff0033; }
-      100% { transform: skew(0.5deg); text-shadow: -1px 0 red; }
-    }
+    @keyframes glitch {
+      0% {
+        transform: skew(0.4deg);
+        text-shadow: -2px 0 red;
+      }
 
+      50% {
+        transform: skew(-0.6deg);
+        text-shadow: 2px 0 #ff0033;
+      }
+
+      100% {
+        transform: skew(0.4deg);
+        text-shadow: -2px 0 red;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<header class="text-center p-4">
-  <h1 class="fw-bold neon-accent glitch">Sheryn Mae Abril</h1>
-  <p class="lead">Computer Science Student • Cybersecurity & Forensics</p>
-</header>
+  <nav class="navbar navbar-dark bg-black sticky-top border-bottom border-danger">
+    <div class="container d-flex justify-content-between">
+      <span class="navbar-brand neon-accent fw-bold glitch">Sheryn</span>
+      <ul class="navbar-nav flex-row gap-3">
+        <li class="nav-item"><a class="nav-link neon-accent" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<div class="container py-5">
+  <header class="text-center py-5">
+    <h1 class="fw-bold neon-accent glitch">Sheryn Mae Abril</h1>
+    <p class="lead">Computer Science Student • Cybersecurity & Forensics</p>
+  </header>
 
-  <!-- ABOUT -->
-  <section class="fade-section mb-5">
-    <h2 class="section-title neon-accent">About Me</h2>
+  <div class="container">
 
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center">
-        <img src="https://i.ibb.co/s9Yndp1J/mae.jpg" class="profile-img">
+    <section id="about" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">About Me</h2>
+
+      <div class="row align-items-center mt-4 gy-4">
+        <div class="col-md-4 text-center">
+          <img src="https://i.ibb.co/s9Yndp1J/mae.jpg" class="profile-img">
+        </div>
+
+        <div class="col-md-8">
+          <p>Hello! I am Sheryn, a Computer Science student specializing in <span class="neon-accent">Cybersecurity & Digital Forensics</span>.</p>
+          <p>I enjoy learning security systems, ethical hacking basics, exploring new tools, and capturing beautiful photos of sunsets.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="col-md-8">
-        <p>Hello everyone! I’m Sheryn, a passionate Computer Science student specializing in <span class="neon-accent">Cybersecurity & Forensics</span>.</p>
-        <p>I love learning new technologies, exploring digital security, and discovering new experiences. Outside tech, I enjoy watching sunsets, traveling, and photography.</p>
+    <section id="skills" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">Skills & Tools</h2>
+
+      <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">💻 Programming</h5>
+            <p>Java, Python, HTML, CSS</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">🛠 Tools</h5>
+            <p>VS Code, VirtualBox, GitHub</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">⭐ Strengths</h5>
+            <p>Creative, Logical, Fast Learner</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">☀ Interests</h5>
+            <p>Travel, Photography, Sunsets</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section class="fade-section mb-5">
-    <h2 class="section-title neon-accent">Skills & Tools</h2>
+    <section id="projects" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">Projects</h2>
 
-    <div class="row g-4">
-      <div class="col-md-3"><div class="portfolio-card text-center"><h4>💻 Programming</h4><p>Java, Python, HTML, CSS</p></div></div>
-      <div class="col-md-3"><div class="portfolio-card text-center"><h4>🛠 Tools</h4><p>VS Code, VirtualBox, GitHub</p></div></div>
-      <div class="col-md-3"><div class="portfolio-card text-center"><h4>⭐ Strengths</h4><p>Creative, Logical, Fast Learner</p></div></div>
-      <div class="col-md-3"><div class="portfolio-card text-center"><h4>🌍 Interests</h4><p>Travel, Photography, Sunsets</p></div></div>
-    </div>
-  </section>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
 
-  <!-- PROJECTS -->
-  <section class="fade-section mb-5">
-    <h2 class="section-title neon-accent">Projects</h2>
+        <div class="col">
+          <div class="card portfolio-card p-3">
+            <h5 class="neon-accent">🔐 Cybersecurity Lab</h5>
+            <p>A practice environment using VirtualBox for ethical hacking and system testing.</p>
+          </div>
+        </div>
 
-    <div class="row g-4">
-      <div class="col-md-4"><div class="portfolio-card"><h4>🔐 Cybersecurity Lab</h4><p>A VM environment used for ethical hacking & system defense testing.</p></div></div>
-      <div class="col-md-4"><div class="portfolio-card"><h4>💬 Student Login App</h4><p>A Java console app for encrypted credential storage.</p></div></div>
-      <div class="col-md-4"><div class="portfolio-card"><h4>📊 Data Dashboard</h4><p>Python visualization using Matplotlib & CSV datasets.</p></div></div>
-    </div>
-  </section>
+        <div class="col">
+          <div class="card portfolio-card p-3">
+            <h5 class="neon-accent">💬 Student Login App</h5>
+            <p>A Java console application with encrypted password storage.</p>
+          </div>
+        </div>
 
-  <!-- GALLERY -->
-  <section class="fade-section mb-5">
-    <h2 class="section-title neon-accent">Gallery</h2>
-    <img src="https://i.ibb.co/s9Yndp1J/mae.jpg" class="gallery-img">
-  </section>
+        <div class="col">
+          <div class="card portfolio-card p-3">
+            <h5 class="neon-accent">📊 Data Dashboard</h5>
+            <p>Python-based data visualization using Matplotlib and CSV datasets.</p>
+          </div>
+        </div>
 
-  <!-- CONTACT -->
-  <section class="fade-section mb-5">
-    <h2 class="section-title neon-accent">Contact</h2>
-    <p>You can reach me through:</p>
-    <ul>
-      <li>School Portal</li>
-      <li>Messenger (Class Group Chat)</li>
-      <li>Microsoft Teams / Classroom</li>
-    </ul>
-  </section>
+      </div>
+    </section>
 
-</div>
+    <section id="gallery" class="fade-section mb-5 text-center">
+      <h2 class="section-title neon-accent">Gallery</h2>
+      <img src="https://i.ibb.co/s9Yndp1J/mae.jpg" class="gallery-img mt-3">
+    </section>
 
-<script>
-  const sections = document.querySelectorAll('.fade-section');
+    <section id="contact" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">Contact</h2>
 
-  function revealSections() {
-    sections.forEach(sec => {
-      if (sec.getBoundingClientRect().top < window.innerHeight - 80) {
-        sec.classList.add("visible");
-      }
-    });
-  }
+      <ul class="list-group bg-transparent mt-3">
+        <li class="list-group-item bg-transparent text-light border-danger">School Portal</li>
+        <li class="list-group-item bg-transparent text-light border-danger">Messenger (Class Group)</li>
+        <li class="list-group-item bg-transparent text-light border-danger">Microsoft Teams</li>
+      </ul>
+    </section>
 
-  window.addEventListener("scroll", revealSections);
-  revealSections();
-</script>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.fade-section');
+
+    function revealSections() {
+      sections.forEach(sec => {
+        const position = sec.getBoundingClientRect().top;
+        if (position < window.innerHeight - 80) {
+          sec.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealSections);
+    revealSections();
+  </script>
 
 </body>
+
 </html>

@@ -1,94 +1,256 @@
 <!DOCTYPE html>
-<html class="ng-csp" data-placeholder-focus="false" lang="en" data-locale="en" translate="no" >
-	<head
- data-requesttoken="nKYTSRWRcj8pkEjyvEUpoPXQXMRPgPfZBH3BBpfRzhQ=:6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=">
-		<meta charset="utf-8">
-		<title>
-			Login – Nextcloud		</title>
-		<meta name="csp-nonce" nonce="6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-				<meta name="apple-itunes-app" content="app-id=1125420102">
-				<meta name="theme-color" content="#00679e">
-		<link rel="icon" href="/apps/theming/favicon?v=ad12faf0">
-		<link rel="apple-touch-icon" href="/apps/theming/icon?v=ad12faf0">
-		<link rel="mask-icon" sizes="any" href="/core/img/favicon-mask.svg" color="#00679e">
-		<link rel="manifest" href="/core/img/manifest.json" crossorigin="use-credentials">
-		<link rel="stylesheet" href="/core/css/server.css?v=eb14789e-0">
-<link rel="stylesheet" href="/apps/theming/css/default.css?v=d449106e-0">
-<link rel="stylesheet" href="/core/css/guest.css?v=eb14789e-0">
-		<script nonce="6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=" defer src="/dist/core-common.js?v=eb14789e-0"></script>
-<script nonce="6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=" defer src="/dist/core-main.js?v=eb14789e-0"></script>
-<script nonce="6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=" defer src="/dist/core-login.js?v=eb14789e-0"></script>
-<script nonce="6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=" defer src="/apps/theming/js/theming.js?v=eb14789e-0"></script>
-<script nonce="6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=">
-var _oc_debug=false;
-var _oc_isadmin=false;
-var backendAllowsPasswordConfirmation=true;
-var oc_dataURL=false;
-var _oc_webroot="";
-var _oc_appswebroots={"activity":"/apps/activity","bruteforcesettings":"/apps/bruteforcesettings","circles":"/apps/circles","cloud_federation_api":"/apps/cloud_federation_api","comments":"/apps/comments","contactsinteraction":"/apps/contactsinteraction","dashboard":"/apps/dashboard","dav":"/apps/dav","federatedfilesharing":"/apps/federatedfilesharing","federation":"/apps/federation","files":"/apps/files","files_downloadlimit":"/apps/files_downloadlimit","files_pdfviewer":"/apps/files_pdfviewer","files_reminders":"/apps/files_reminders","files_sharing":"/apps/files_sharing","files_trashbin":"/apps/files_trashbin","files_versions":"/apps/files_versions","firstrunwizard":"/apps/firstrunwizard","logreader":"/apps/logreader","lookup_server_connector":"/apps/lookup_server_connector","nextcloud_announcements":"/apps/nextcloud_announcements","notifications":"/apps/notifications","oauth2":"/apps/oauth2","password_policy":"/apps/password_policy","photos":"/apps/photos","privacy":"/apps/privacy","profile":"/apps/profile","provisioning_api":"/apps/provisioning_api","recommendations":"/apps/recommendations","related_resources":"/apps/related_resources","serverinfo":"/apps/serverinfo","settings":"/apps/settings","sharebymail":"/apps/sharebymail","support":"/apps/support","survey_client":"/apps/survey_client","systemtags":"/apps/systemtags","text":"/apps/text","theming":"/apps/theming","twofactor_backupcodes":"/apps/twofactor_backupcodes","twofactor_totp":"/apps/twofactor_totp","updatenotification":"/apps/updatenotification","user_status":"/apps/user_status","viewer":"/apps/viewer","weather_status":"/apps/weather_status","webhook_listeners":"/apps/webhook_listeners","workflowengine":"/apps/workflowengine"};
-var datepickerFormatDate="M\/d\/yy";
-var nc_lastLogin=0;
-var nc_pageLoad=1764937630;
-var dayNames=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-var dayNamesShort=["Sun.","Mon.","Tue.","Wed.","Thu.","Fri.","Sat."];
-var dayNamesMin=["Su","Mo","Tu","We","Th","Fr","Sa"];
-var monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];
-var monthNamesShort=["Jan.","Feb.","Mar.","Apr.","May.","Jun.","Jul.","Aug.","Sep.","Oct.","Nov.","Dec."];
-var firstDay=0;
-var _oc_config={"blacklist_files_regex":"\\.(part|filepart)$","forbidden_filename_characters":["\\","\/"],"auto_logout":false,"loglevel":2,"lost_password_link":null,"modRewriteWorking":true,"no_unsupported_browser_warning":false,"session_keepalive":true,"session_lifetime":1440,"sharing.maxAutocompleteResults":25,"sharing.minSearchStringLength":0,"version":"32.0.2.2","versionstring":"32.0.2","enable_non-accessible_features":true};
-var oc_appconfig={"core":{"defaultExpireDateEnabled":false,"defaultExpireDate":null,"defaultExpireDateEnforced":null,"enforcePasswordForPublicLink":false,"enableLinkPasswordByDefault":false,"sharingDisabledForUser":false,"resharingAllowed":true,"remoteShareAllowed":true,"federatedCloudShareDoc":"https:\/\/docs.nextcloud.com\/server\/32\/go.php?to=user-sharing-federated","allowGroupSharing":true,"defaultInternalExpireDateEnabled":false,"defaultInternalExpireDate":null,"defaultInternalExpireDateEnforced":null,"defaultRemoteExpireDateEnabled":false,"defaultRemoteExpireDate":null,"defaultRemoteExpireDateEnforced":null},"files":{"max_chunk_size":104857600}};
-var _theme={"entity":"Nextcloud","name":"Nextcloud","productName":"Nextcloud","title":"Nextcloud","baseUrl":"https:\/\/nextcloud.com","syncClientUrl":"https:\/\/nextcloud.com\/install\/#install-clients","docBaseUrl":"https:\/\/docs.nextcloud.com","docPlaceholderUrl":"https:\/\/docs.nextcloud.com\/server\/32\/go.php?to=PLACEHOLDER","slogan":"a safe home for all your data","logoClaim":"","folder":""};
+<html lang="en">
 
-</script>
-		<meta property="og:title" content="Nextcloud"/><meta property="og:description" content="a safe home for all your data"/><meta property="og:site_name" content="Nextcloud"/><meta property="og:url" content="https://cloud.gelolaus.com/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://cloud.gelolaus.com/apps/theming/icon?v=ad12faf0"/><meta name="referrer" content="same-origin"/><link rel="stylesheet" media="" href="/apps/theming/theme/default.css?plain=1&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="(prefers-color-scheme: light)" href="/apps/theming/theme/light.css?plain=1&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="(prefers-color-scheme: dark)" href="/apps/theming/theme/dark.css?plain=1&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="(prefers-contrast: more)" href="/apps/theming/theme/light-highcontrast.css?plain=1&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="(prefers-color-scheme: dark) and (prefers-contrast: more)" href="/apps/theming/theme/dark-highcontrast.css?plain=1&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="" href="/apps/theming/theme/light.css?plain=0&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="" href="/apps/theming/theme/dark.css?plain=0&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="" href="/apps/theming/theme/light-highcontrast.css?plain=0&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="" href="/apps/theming/theme/dark-highcontrast.css?plain=0&amp;v=ad12faf0" class="theme"/><link rel="stylesheet" media="" href="/apps/theming/theme/opendyslexic.css?plain=0&amp;v=ad12faf0" class="theme"/><meta name="color-scheme" content="light dark"/>	</head>
-	<body id="body-login"  data-themes="">
-		<noscript>
-	<div id="nojavascript">
-		<div>
-			This application requires JavaScript for correct operation. Please <a href="https://www.enable-javascript.com/" target="_blank" rel="noreferrer noopener">enable JavaScript</a> and reload the page.		</div>
-	</div>
-</noscript>
-		<div id="initial-state-container" style="display: none;">
-			<input type="hidden" id="initial-state-core-loginUsername" value="IiI=">
-			<input type="hidden" id="initial-state-core-loginAutocomplete" value="dHJ1ZQ==">
-			<input type="hidden" id="initial-state-core-loginCanRememberme" value="dHJ1ZQ==">
-			<input type="hidden" id="initial-state-core-loginThrottleDelay" value="MA==">
-			<input type="hidden" id="initial-state-core-loginResetPasswordLink" value="IiI=">
-			<input type="hidden" id="initial-state-core-loginCanResetPassword" value="dHJ1ZQ==">
-			<input type="hidden" id="initial-state-core-emailStates" value="W10=">
-			<input type="hidden" id="initial-state-core-webauthn-available" value="dHJ1ZQ==">
-			<input type="hidden" id="initial-state-core-hideLoginForm" value="ZmFsc2U=">
-			<input type="hidden" id="initial-state-core-countAlternativeLogins" value="MA==">
-			<input type="hidden" id="initial-state-core-alternativeLogins" value="W10=">
-			<input type="hidden" id="initial-state-core-loginTimeout" value="MzAw">
-			<input type="hidden" id="initial-state-core-projects_enabled" value="ZmFsc2U=">
-			<input type="hidden" id="initial-state-core-config" value="eyJibGFja2xpc3RfZmlsZXNfcmVnZXgiOiJcXC4ocGFydHxmaWxlcGFydCkkIiwiZm9yYmlkZGVuX2ZpbGVuYW1lX2NoYXJhY3RlcnMiOlsiXFwiLCJcLyJdLCJhdXRvX2xvZ291dCI6ZmFsc2UsImxvZ2xldmVsIjoyLCJsb3N0X3Bhc3N3b3JkX2xpbmsiOm51bGwsIm1vZFJld3JpdGVXb3JraW5nIjp0cnVlLCJub191bnN1cHBvcnRlZF9icm93c2VyX3dhcm5pbmciOmZhbHNlLCJzZXNzaW9uX2tlZXBhbGl2ZSI6dHJ1ZSwic2Vzc2lvbl9saWZldGltZSI6MTQ0MCwic2hhcmluZy5tYXhBdXRvY29tcGxldGVSZXN1bHRzIjoyNSwic2hhcmluZy5taW5TZWFyY2hTdHJpbmdMZW5ndGgiOjAsInZlcnNpb24iOiIzMi4wLjIuMiIsInZlcnNpb25zdHJpbmciOiIzMi4wLjIiLCJlbmFibGVfbm9uLWFjY2Vzc2libGVfZmVhdHVyZXMiOnRydWV9">
-			<input type="hidden" id="initial-state-core-capabilities" value="eyJjb3JlIjp7InBvbGxpbnRlcnZhbCI6NjAsIndlYmRhdi1yb290IjoicmVtb3RlLnBocFwvd2ViZGF2IiwicmVmZXJlbmNlLWFwaSI6dHJ1ZSwicmVmZXJlbmNlLXJlZ2V4IjoiKFxcc3xcXG58XikoaHR0cHM/OlxcXC9cXFwvKShbLUEtWjAtOStfLl0rKD86OlswLTldKyk/KD86XFxcL1stQS1aMC05KyZAIyU/PX5ffCE6LC47KCldKikqKShcXHN8XFxufCQpIiwibW9kLXJld3JpdGUtd29ya2luZyI6dHJ1ZX0sImZpbGVzIjp7IiRjb21tZW50IjoiXCJibGFja2xpc3RlZF9maWxlc1wiIGlzIGRlcHJlY2F0ZWQgYXMgb2YgTmV4dGNsb3VkIDMwLCB1c2UgXCJmb3JiaWRkZW5fZmlsZW5hbWVzXCIgaW5zdGVhZCIsImJsYWNrbGlzdGVkX2ZpbGVzIjpbIi5odGFjY2VzcyJdLCJmb3JiaWRkZW5fZmlsZW5hbWVzIjpbIi5odGFjY2VzcyJdLCJmb3JiaWRkZW5fZmlsZW5hbWVfYmFzZW5hbWVzIjpbXSwiZm9yYmlkZGVuX2ZpbGVuYW1lX2NoYXJhY3RlcnMiOlsiXFwiLCJcLyJdLCJmb3JiaWRkZW5fZmlsZW5hbWVfZXh0ZW5zaW9ucyI6WyIuZmlsZXBhcnQiLCIucGFydCJdLCJiaWdmaWxlY2h1bmtpbmciOnRydWUsImNodW5rZWRfdXBsb2FkIjp7Im1heF9zaXplIjoxMDQ4NTc2MDAsIm1heF9wYXJhbGxlbF9jb3VudCI6NX0sImZpbGVfY29udmVyc2lvbnMiOltdLCJjb21tZW50cyI6dHJ1ZSwidW5kZWxldGUiOnRydWUsImRlbGV0ZV9mcm9tX3RyYXNoIjp0cnVlLCJ2ZXJzaW9uaW5nIjp0cnVlLCJ2ZXJzaW9uX2xhYmVsaW5nIjp0cnVlLCJ2ZXJzaW9uX2RlbGV0aW9uIjp0cnVlfSwiYWN0aXZpdHkiOnsiYXBpdjIiOlsiZmlsdGVycyIsImZpbHRlcnMtYXBpIiwicHJldmlld3MiLCJyaWNoLXN0cmluZ3MiXX0sImNpcmNsZXMiOnsidmVyc2lvbiI6IjMyLjAuMCIsInN0YXR1cyI6eyJnbG9iYWxTY2FsZSI6ZmFsc2V9LCJzZXR0aW5ncyI6eyJmcm9udGVuZEVuYWJsZWQiOnRydWUsImFsbG93ZWRDaXJjbGVzIjoyNjIxNDMsImFsbG93ZWRVc2VyVHlwZXMiOjMxLCJtZW1iZXJzTGltaXQiOi0xfSwiY2lyY2xlIjp7ImNvbnN0YW50cyI6eyJmbGFncyI6eyIxIjoiU2luZ2xlIiwiMiI6IlBlcnNvbmFsIiwiNCI6IlN5c3RlbSIsIjgiOiJWaXNpYmxlIiwiMTYiOiJPcGVuIiwiMzIiOiJJbnZpdGUiLCI2NCI6IkpvaW4gcmVxdWVzdCIsIjEyOCI6IkZyaWVuZHMiLCIyNTYiOiJQYXNzd29yZCBwcm90ZWN0ZWQiLCI1MTIiOiJObyBPd25lciIsIjEwMjQiOiJIaWRkZW4iLCIyMDQ4IjoiQmFja2VuZCIsIjQwOTYiOiJMb2NhbCIsIjgxOTIiOiJSb290IiwiMTYzODQiOiJUZWFtIGludml0ZSIsIjMyNzY4IjoiRmVkZXJhdGVkIiwiNjU1MzYiOiJNb3VudCBwb2ludCJ9LCJzb3VyY2UiOnsiY29yZSI6eyIxIjoiTmV4dGNsb3VkIEFjY291bnQiLCIyIjoiTmV4dGNsb3VkIEdyb3VwIiwiNCI6IkVtYWlsIGFkZHJlc3MiLCI4IjoiQ29udGFjdCIsIjE2IjoiVGVhbSIsIjEwMDAwIjoiTmV4dGNsb3VkIEFwcCJ9LCJleHRyYSI6eyIxMDAwMSI6IlRlYW1zIEFwcCIsIjEwMDAyIjoiQWRtaW4gQ29tbWFuZCBMaW5lIn19fSwiY29uZmlnIjp7ImNvcmVGbGFncyI6WzEsMiw0XSwic3lzdGVtRmxhZ3MiOls1MTIsMTAyNCwyMDQ4XX19LCJtZW1iZXIiOnsiY29uc3RhbnRzIjp7ImxldmVsIjp7IjEiOiJNZW1iZXIiLCI0IjoiTW9kZXJhdG9yIiwiOCI6IkFkbWluIiwiOSI6Ik93bmVyIn19LCJ0eXBlIjp7IjAiOiJzaW5nbGUiLCIxIjoidXNlciIsIjIiOiJncm91cCIsIjQiOiJtYWlsIiwiOCI6ImNvbnRhY3QiLCIxNiI6ImNpcmNsZSIsIjEwMDAwIjoiYXBwIn19LCJ0ZWFtUmVzb3VyY2VQcm92aWRlcnMiOlsiZmlsZXMiXX0sImRhdiI6eyJjaHVua2luZyI6IjEuMCIsInB1YmxpY19zaGFyZXNfY2h1bmtpbmciOmZhbHNlLCJidWxrdXBsb2FkIjoiMS4wIiwiYWJzZW5jZS1zdXBwb3J0ZWQiOnRydWUsImFic2VuY2UtcmVwbGFjZW1lbnQiOnRydWV9LCJkb3dubG9hZGxpbWl0Ijp7ImVuYWJsZWQiOnRydWUsImRlZmF1bHQtbGltaXQiOi0xfSwiZmlsZXNfc2hhcmluZyI6eyJhcGlfZW5hYmxlZCI6dHJ1ZSwicHVibGljIjp7ImVuYWJsZWQiOnRydWUsInBhc3N3b3JkIjp7ImVuZm9yY2VkIjpmYWxzZSwiYXNrRm9yT3B0aW9uYWxQYXNzd29yZCI6ZmFsc2V9LCJleHBpcmVfZGF0ZSI6eyJlbmFibGVkIjpmYWxzZX0sIm11bHRpcGxlX2xpbmtzIjp0cnVlLCJleHBpcmVfZGF0ZV9pbnRlcm5hbCI6eyJlbmFibGVkIjpmYWxzZX0sImV4cGlyZV9kYXRlX3JlbW90ZSI6eyJlbmFibGVkIjpmYWxzZX0sInNlbmRfbWFpbCI6ZmFsc2UsInVwbG9hZCI6dHJ1ZSwidXBsb2FkX2ZpbGVzX2Ryb3AiOnRydWUsImN1c3RvbV90b2tlbnMiOmZhbHNlfSwicmVzaGFyaW5nIjp0cnVlLCJ1c2VyIjp7InNlbmRfbWFpbCI6ZmFsc2UsImV4cGlyZV9kYXRlIjp7ImVuYWJsZWQiOnRydWV9fSwiZ3JvdXBfc2hhcmluZyI6dHJ1ZSwiZ3JvdXAiOnsiZW5hYmxlZCI6dHJ1ZSwiZXhwaXJlX2RhdGUiOnsiZW5hYmxlZCI6dHJ1ZX19LCJkZWZhdWx0X3Blcm1pc3Npb25zIjozMSwiZmVkZXJhdGlvbiI6eyJvdXRnb2luZyI6dHJ1ZSwiaW5jb21pbmciOnRydWUsImV4cGlyZV9kYXRlIjp7ImVuYWJsZWQiOnRydWV9LCJleHBpcmVfZGF0ZV9zdXBwb3J0ZWQiOnsiZW5hYmxlZCI6dHJ1ZX19LCJzaGFyZWUiOnsicXVlcnlfbG9va3VwX2RlZmF1bHQiOmZhbHNlLCJhbHdheXNfc2hvd191bmlxdWUiOnRydWV9LCJzaGFyZWJ5bWFpbCI6eyJlbmFibGVkIjp0cnVlLCJzZW5kX3Bhc3N3b3JkX2J5X21haWwiOnRydWUsInVwbG9hZF9maWxlc19kcm9wIjp7ImVuYWJsZWQiOnRydWV9LCJwYXNzd29yZCI6eyJlbmFibGVkIjp0cnVlLCJlbmZvcmNlZCI6ZmFsc2V9LCJleHBpcmVfZGF0ZSI6eyJlbmFibGVkIjp0cnVlLCJlbmZvcmNlZCI6ZmFsc2V9fX0sIm5vdGlmaWNhdGlvbnMiOnsib2NzLWVuZHBvaW50cyI6WyJsaXN0IiwiZ2V0IiwiZGVsZXRlIiwiZGVsZXRlLWFsbCIsImljb25zIiwicmljaC1zdHJpbmdzIiwiYWN0aW9uLXdlYiIsInVzZXItc3RhdHVzIiwiZXhpc3RzIiwidGVzdC1wdXNoIl0sInB1c2giOlsiZGV2aWNlcyIsIm9iamVjdC1kYXRhIiwiZGVsZXRlIl0sImFkbWluLW5vdGlmaWNhdGlvbnMiOlsib2NzIiwiY2xpIl19LCJwYXNzd29yZF9wb2xpY3kiOnsiYXBpIjp7ImdlbmVyYXRlIjoiaHR0cHM6XC9cL2Nsb3VkLmdlbG9sYXVzLmNvbVwvb2NzXC92Mi5waHBcL2FwcHNcL3Bhc3N3b3JkX3BvbGljeVwvYXBpXC92MVwvZ2VuZXJhdGUiLCJ2YWxpZGF0ZSI6Imh0dHBzOlwvXC9jbG91ZC5nZWxvbGF1cy5jb21cL29jc1wvdjIucGhwXC9hcHBzXC9wYXNzd29yZF9wb2xpY3lcL2FwaVwvdjFcL3ZhbGlkYXRlIn0sInBvbGljaWVzIjp7ImFjY291bnQiOnsibWluTGVuZ3RoIjoxMCwiZW5mb3JjZUhhdmVJQmVlblB3bmVkIjp0cnVlLCJlbmZvcmNlTm9uQ29tbW9uUGFzc3dvcmQiOnRydWUsImVuZm9yY2VOdW1lcmljQ2hhcmFjdGVycyI6ZmFsc2UsImVuZm9yY2VTcGVjaWFsQ2hhcmFjdGVycyI6ZmFsc2UsImVuZm9yY2VVcHBlckxvd2VyQ2FzZSI6ZmFsc2V9fSwibWluTGVuZ3RoIjoxMCwiZW5mb3JjZU5vbkNvbW1vblBhc3N3b3JkIjp0cnVlLCJlbmZvcmNlTnVtZXJpY0NoYXJhY3RlcnMiOmZhbHNlLCJlbmZvcmNlU3BlY2lhbENoYXJhY3RlcnMiOmZhbHNlLCJlbmZvcmNlVXBwZXJMb3dlckNhc2UiOmZhbHNlfSwicHJvdmlzaW9uaW5nX2FwaSI6eyJ2ZXJzaW9uIjoiMS4yMi4wIiwiQWNjb3VudFByb3BlcnR5U2NvcGVzVmVyc2lvbiI6MiwiQWNjb3VudFByb3BlcnR5U2NvcGVzRmVkZXJhdGVkRW5hYmxlZCI6dHJ1ZSwiQWNjb3VudFByb3BlcnR5U2NvcGVzUHVibGlzaGVkRW5hYmxlZCI6ZmFsc2V9LCJzeXN0ZW10YWdzIjp7ImVuYWJsZWQiOnRydWV9LCJ0aGVtaW5nIjp7Im5hbWUiOiJOZXh0Y2xvdWQiLCJwcm9kdWN0TmFtZSI6Ik5leHRjbG91ZCIsInVybCI6Imh0dHBzOlwvXC9uZXh0Y2xvdWQuY29tIiwic2xvZ2FuIjoiYSBzYWZlIGhvbWUgZm9yIGFsbCB5b3VyIGRhdGEiLCJjb2xvciI6IiMwMDY3OWUiLCJjb2xvci10ZXh0IjoiI2ZmZmZmZiIsImNvbG9yLWVsZW1lbnQiOiIjMDA2NzllIiwiY29sb3ItZWxlbWVudC1icmlnaHQiOiIjMDA2NzllIiwiY29sb3ItZWxlbWVudC1kYXJrIjoiIzAwNjc5ZSIsImxvZ28iOiJodHRwczpcL1wvY2xvdWQuZ2Vsb2xhdXMuY29tXC9jb3JlXC9pbWdcL2xvZ29cL2xvZ28uc3ZnP3Y9MCIsImJhY2tncm91bmQiOiJodHRwczpcL1wvY2xvdWQuZ2Vsb2xhdXMuY29tXC9hcHBzXC90aGVtaW5nXC9pbWdcL2JhY2tncm91bmRcL2pvLW15b3VuZy1oZWUtZmx1aWQud2VicCIsImJhY2tncm91bmQtdGV4dCI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kLXBsYWluIjpmYWxzZSwiYmFja2dyb3VuZC1kZWZhdWx0Ijp0cnVlLCJsb2dvaGVhZGVyIjoiaHR0cHM6XC9cL2Nsb3VkLmdlbG9sYXVzLmNvbVwvY29yZVwvaW1nXC9sb2dvXC9sb2dvLnN2Zz92PTAiLCJmYXZpY29uIjoiaHR0cHM6XC9cL2Nsb3VkLmdlbG9sYXVzLmNvbVwvY29yZVwvaW1nXC9sb2dvXC9sb2dvLnN2Zz92PTAifSwidXNlcl9zdGF0dXMiOnsiZW5hYmxlZCI6dHJ1ZSwicmVzdG9yZSI6dHJ1ZSwic3VwcG9ydHNfZW1vamkiOnRydWUsInN1cHBvcnRzX2J1c3kiOnRydWV9LCJ3ZWF0aGVyX3N0YXR1cyI6eyJlbmFibGVkIjp0cnVlfX0=">
-			<input type="hidden" id="initial-state-core-versionHash" value="ImViMTQ3ODllIg==">
-			<input type="hidden" id="initial-state-theming-data" value="eyJuYW1lIjoiTmV4dGNsb3VkIiwic2xvZ2FuIjoiYSBzYWZlIGhvbWUgZm9yIGFsbCB5b3VyIGRhdGEiLCJ1cmwiOiJodHRwczpcL1wvbmV4dGNsb3VkLmNvbSIsImltcHJpbnRVcmwiOiIiLCJwcml2YWN5VXJsIjoiIiwicHJpbWFyeUNvbG9yIjoiIzAwNjc5ZSIsImJhY2tncm91bmRDb2xvciI6IiMwMDY3OWUiLCJkZWZhdWx0UHJpbWFyeUNvbG9yIjoiIzAwNjc5ZSIsImRlZmF1bHRCYWNrZ3JvdW5kQ29sb3IiOiIjMDA2NzllIiwiaW52ZXJ0ZWQiOmZhbHNlLCJjYWNoZUJ1c3RlciI6ImFkMTJmYWYwIiwiZW5hYmxlZFRoZW1lcyI6W10sImNvbG9yIjoiIzAwNjc5ZSIsIiI6ImNvbG9yIGlzIGRlcHJlY2F0ZWQgc2luY2UgTmV4dGNsb3VkIDI5LCB1c2UgcHJpbWFyeUNvbG9yIGluc3RlYWQifQ==">
-			<input type="hidden" id="initial-state-comments-maxAutoCompleteResults" value="MTA=">
-	</div>
-		<div class="wrapper">
-			<div class="v-align">
-									<header>
-						<div id="header" class="header-guest">
-							<div class="logo"></div>
-						</div>
-					</header>
-								<div>
-					<h1 class="hidden-visually">
-						Nextcloud					</h1>
-					<div>
-	<div id="login"></div>
-</div>
-				</div>
-			</div>
-		</div>
-				<footer class="guest-box ">
-			<p class="info">
-				<a href="https://nextcloud.com" target="_blank" rel="noreferrer noopener" class="entity-name">Nextcloud</a> – a safe home for all your data			</p>
-		</footer>
-	<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" nonce="6+d9M2HeRXZq1zGGjy8bx8GYFPQszYC4awetc9OrhSc=" data-cf-beacon='{"version":"2024.11.0","token":"4adae7b916274def9d79c4edec112faf","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<head>
+  <title>Sheryn Mae Abril - Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+
+    body {
+      background-color: #050505;
+      color: #d6d6d6;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: linear-gradient(
+          rgba(255, 0, 0, 0.05) 1px,
+          transparent 1px
+        );
+      background-size: 100% 3px;
+      z-index: 2;
+    }
+
+    .neon-accent {
+      color: #ff0033;
+      text-shadow: 0 0 8px #ff0033, 0 0 20px #ff0033;
+    }
+
+    .section-title {
+      border-left: 4px solid #ff0033;
+      padding-left: 12px;
+      text-shadow: 0 0 8px #ff0033;
+      letter-spacing: 1px;
+    }
+
+    .profile-img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 16px;
+      border: 2px solid #ff0033;
+      box-shadow: 0 0 18px rgba(255, 0, 50, 0.45);
+      transition: 0.4s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 0, 50, 0.85);
+    }
+
+    .portfolio-card {
+      background: #0e0e0e;
+      border: 1px solid #2a0000;
+      box-shadow: 0 0 10px rgba(255, 0, 40, 0.2);
+      transition: 0.35s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      border-color: #ff0033;
+      box-shadow: 0 0 25px rgba(255, 0, 60, 0.5);
+    }
+
+    .gallery-img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 15px;
+      border: 2px solid #ff0033;
+      box-shadow: 0 0 25px rgba(255, 0, 60, 0.35);
+    }
+
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glitch:hover {
+      animation: glitch 0.2s steps(2, end) infinite;
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: skew(0.4deg);
+        text-shadow: -2px 0 red;
+      }
+
+      50% {
+        transform: skew(-0.6deg);
+        text-shadow: 2px 0 #ff0033;
+      }
+
+      100% {
+        transform: skew(0.4deg);
+        text-shadow: -2px 0 red;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-black sticky-top border-bottom border-danger">
+    <div class="container d-flex justify-content-between">
+      <span class="navbar-brand neon-accent fw-bold glitch">Sheryn</span>
+      <ul class="navbar-nav flex-row gap-3">
+        <li class="nav-item"><a class="nav-link neon-accent" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link neon-accent" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="text-center py-5">
+    <h1 class="fw-bold neon-accent glitch">Sheryn Mae Abril</h1>
+    <p class="lead">Computer Science Student • Cybersecurity & Forensics</p>
+  </header>
+
+  <div class="container">
+
+    <section id="about" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">About Me</h2>
+
+      <div class="row align-items-center mt-4 gy-4">
+        <div class="col-md-4 text-center">
+          <img src="https://i.ibb.co/s9Yndp1J/mae.jpg" class="profile-img">
+        </div>
+
+        <div class="col-md-8">
+          <p>Hello! I am Sheryn, a Computer Science student specializing in <span class="neon-accent">Cybersecurity & Digital Forensics</span>.</p>
+          <p>I enjoy learning security systems, ethical hacking basics, exploring new tools, and capturing beautiful photos of sunsets.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">Skills & Tools</h2>
+
+      <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">💻 Programming</h5>
+            <p>Java, Python, HTML, CSS</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">🛠 Tools</h5>
+            <p>VS Code, VirtualBox, GitHub</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">⭐ Strengths</h5>
+            <p>Creative, Logical, Fast Learner</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3 text-center">
+            <h5 class="neon-accent">☀ Interests</h5>
+            <p>Travel, Photography, Sunsets</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">Projects</h2>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+
+        <div class="col">
+          <div class="card portfolio-card p-3">
+            <h5 class="neon-accent">🔐 Cybersecurity Lab</h5>
+            <p>A practice environment using VirtualBox for ethical hacking and system testing.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3">
+            <h5 class="neon-accent">💬 Student Login App</h5>
+            <p>A Java console application with encrypted password storage.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card portfolio-card p-3">
+            <h5 class="neon-accent">📊 Data Dashboard</h5>
+            <p>Python-based data visualization using Matplotlib and CSV datasets.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="gallery" class="fade-section mb-5 text-center">
+      <h2 class="section-title neon-accent">Gallery</h2>
+      <img src="https://i.ibb.co/s9Yndp1J/mae.jpg" class="gallery-img mt-3">
+    </section>
+
+    <section id="contact" class="fade-section mb-5">
+      <h2 class="section-title neon-accent">Contact</h2>
+
+      <ul class="list-group bg-transparent mt-3">
+        <li class="list-group-item bg-transparent text-light border-danger">School Portal</li>
+        <li class="list-group-item bg-transparent text-light border-danger">Messenger (Class Group)</li>
+        <li class="list-group-item bg-transparent text-light border-danger">Microsoft Teams</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.fade-section');
+
+    function revealSections() {
+      sections.forEach(sec => {
+        const position = sec.getBoundingClientRect().top;
+        if (position < window.innerHeight - 80) {
+          sec.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealSections);
+    revealSections();
+  </script>
+
 </body>
+
 </html>

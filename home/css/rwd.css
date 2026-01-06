@@ -1,4 +1,3 @@
-/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -11,118 +10,125 @@ body {
   color: #eee;
 }
 
-/* NAV */
+/* NAVBAR */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
   position: sticky;
   top: 0;
   background: #111;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
   z-index: 1000;
 }
 
-.navbar .logo {
+.logo {
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.6rem;
   color: #ff4d4d;
 }
 
-.navbar nav a {
+nav a {
   margin-left: 20px;
   color: #eee;
   text-decoration: none;
-  font-weight: 400;
 }
 
-.navbar nav a:hover {
+nav a:hover {
   color: #ff4d4d;
 }
 
 /* HERO */
-.hero-section {
+.hero {
   height: 90vh;
-  background: linear-gradient(135deg, #1c1c1c, #000);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: linear-gradient(135deg, #1a1a1a, #000);
 }
 
-.hero-section h1 {
+.hero h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
 }
 
-.hero-section h1 span {
-  color: #ff3333;
+.hero span {
+  color: #ff4d4d;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #ccc;
 }
 
 /* SECTIONS */
-.section-wrapper {
-  padding: 60px 40px;
-  max-width: 1000px;
-  margin: auto;
+.section {
+  padding: 80px 20px;
 }
 
-.section-wrapper h2 {
+/* CARD STYLE (THIS FIXES "PLAIN" LOOK) */
+.card {
+  max-width: 900px;
+  margin: auto;
+  background: #111;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #222;
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.15);
+}
+
+.card h2 {
   color: #ff4d4d;
   margin-bottom: 15px;
-  font-weight: 600;
 }
 
 /* SKILLS */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills-container span {
+.skills span {
+  display: inline-block;
   background: #ff4d4d;
-  padding: 8px 15px;
+  color: #000;
+  padding: 8px 16px;
+  margin: 6px;
   border-radius: 20px;
   font-size: 0.9rem;
-  color: #000;
 }
 
 /* PROJECTS */
-.projects-grid {
+.projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.proj-card {
-  background: #111;
+.project-card {
+  background: #181818;
   padding: 20px;
-  border: 1px solid #222;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: 0.3s ease;
 }
 
-.proj-card:hover {
+.project-card:hover {
   transform: translateY(-5px);
-  border-color: #ff4d4d;
+  border: 1px solid #ff4d4d;
 }
 
 /* CONTACT */
-.social-links a {
+.contact-links a {
+  display: inline-block;
   margin-right: 15px;
+  margin-top: 10px;
   color: #ff4d4d;
-  font-weight: 500;
   text-decoration: none;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
+  padding: 20px;
   color: #aaa;
 }
 
-/* FADE-IN */
+/* FADE-IN ANIMATION */
 .fade-in {
   opacity: 0;
   transform: translateY(25px);
@@ -132,4 +138,11 @@ footer {
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }

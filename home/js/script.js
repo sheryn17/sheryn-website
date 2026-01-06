@@ -1,52 +1,49 @@
-// Fade in sections when scroll into view
+// Fade-in animation on scroll
 const sections = document.querySelectorAll('.fade-in');
 
-const revealOnScroll = () => {
+function revealOnScroll() {
   sections.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 80) {
+    if (section.getBoundingClientRect().top < window.innerHeight - 80) {
       section.classList.add('show');
     }
   });
-};
+}
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
-// Smooth scroll for nav
+// Smooth scroll navigation
 document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
+    document.querySelector(link.getAttribute("href"))
       .scrollIntoView({ behavior: "smooth" });
   });
 });
 
-const text = [
+// Typing animation
+const texts = [
   "Computer Science Student",
   "Cyber Security Enthusiast",
   "Future Digital Explorer 🌍"
 ];
 
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+let textIndex = 0;
+let charIndex = 0;
 
-(function type() {
-  if (count === text.length) count = 0;
+function typeEffect() {
+  const current = texts[textIndex];
+  document.querySelector(".typing").textContent =
+    current.slice(0, charIndex++);
 
-  currentText = text[count];
-  letter = currentText.slice(0, ++index);
-
-  document.querySelector(".typing").textContent = letter;
-
-  if (letter.length === currentText.length) {
+  if (charIndex > current.length) {
     setTimeout(() => {
-      index = 0;
-      count++;
+      charIndex = 0;
+      textIndex = (textIndex + 1) % texts.length;
     }, 2000);
   }
 
-  setTimeout(type, 120);
-})();
+  setTimeout(typeEffect, 100);
+}
+
+typeEffect();

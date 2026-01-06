@@ -1,3 +1,11 @@
+:root {
+  --bg-dark: #000;
+  --card-dark: #111;
+  --accent: #ff4d4d;
+  --text-light: #eee;
+  --text-muted: #ccc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +14,8 @@
 }
 
 body {
-  background: #000;
-  color: #eee;
+  background: var(--bg-dark);
+  color: var(--text-light);
 }
 
 /* NAVBAR */
@@ -17,6 +25,7 @@ body {
   background: #111;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
   z-index: 1000;
 }
@@ -24,17 +33,17 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ff4d4d;
+  color: var(--accent);
 }
 
 nav a {
   margin-left: 20px;
-  color: #eee;
+  color: var(--text-light);
   text-decoration: none;
 }
 
 nav a:hover {
-  color: #ff4d4d;
+  color: var(--accent);
 }
 
 /* HERO */
@@ -53,12 +62,13 @@ nav a:hover {
 }
 
 .hero span {
-  color: #ff4d4d;
+  color: var(--accent);
+  text-shadow: 0 0 15px rgba(255, 77, 77, 0.6);
 }
 
 .hero p {
   margin-top: 10px;
-  color: #ccc;
+  color: var(--text-muted);
 }
 
 /* SECTIONS */
@@ -66,11 +76,10 @@ nav a:hover {
   padding: 80px 20px;
 }
 
-/* CARD STYLE (THIS FIXES "PLAIN" LOOK) */
 .card {
   max-width: 900px;
   margin: auto;
-  background: #111;
+  background: var(--card-dark);
   padding: 40px;
   border-radius: 15px;
   border: 1px solid #222;
@@ -78,14 +87,14 @@ nav a:hover {
 }
 
 .card h2 {
-  color: #ff4d4d;
+  color: var(--accent);
   margin-bottom: 15px;
 }
 
 /* SKILLS */
 .skills span {
   display: inline-block;
-  background: #ff4d4d;
+  background: var(--accent);
   color: #000;
   padding: 8px 16px;
   margin: 6px;
@@ -109,7 +118,7 @@ nav a:hover {
 
 .project-card:hover {
   transform: translateY(-5px);
-  border: 1px solid #ff4d4d;
+  border: 1px solid var(--accent);
 }
 
 /* CONTACT */
@@ -117,7 +126,7 @@ nav a:hover {
   display: inline-block;
   margin-right: 15px;
   margin-top: 10px;
-  color: #ff4d4d;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -128,7 +137,7 @@ footer {
   color: #aaa;
 }
 
-/* FADE-IN ANIMATION */
+/* ANIMATIONS */
 .fade-in {
   opacity: 0;
   transform: translateY(25px);
@@ -140,21 +149,25 @@ footer {
   transform: translateY(0);
 }
 
+/* DIVIDER */
+.divider {
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  margin: 60px auto;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
   }
-}
 
-.hero span {
-  color: #ff4d4d;
-  text-shadow: 0 0 15px rgba(255, 77, 77, 0.6);
-}
+  .navbar {
+    flex-direction: column;
+  }
 
-.divider {
-  width: 120px;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #ff4d4d, transparent);
-  margin: 60px auto;
+  nav a {
+    margin: 10px;
+  }
 }

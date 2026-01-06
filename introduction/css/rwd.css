@@ -1,3 +1,4 @@
+/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -6,98 +7,126 @@
 }
 
 body {
-  background: #0e0e0e;
-  color: #f5f5f5;
-  line-height: 1.7;
+  background: #000;
+  color: #eee;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ff4d4d;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  color: #eee;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.navbar nav a:hover {
+  color: #ff4d4d;
 }
 
 /* HERO */
-.hero {
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(135deg, #1c1c1c, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #b30000, #000);
 }
 
-.hero h1 {
+.hero-section h1 {
   font-size: 3rem;
-  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  color: #ddd;
-  margin-top: 10px;
-}
-
-nav {
-  margin-top: 30px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: 300;
-}
-
-nav a:hover {
-  color: #ff4d4d;
+.hero-section h1 span {
+  color: #ff3333;
 }
 
 /* SECTIONS */
-.card {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #1a1a1a;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+.section-wrapper {
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.card h2 {
+.section-wrapper h2 {
   color: #ff4d4d;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.card ul {
-  list-style: none;
+/* SKILLS */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.card ul li {
-  margin-bottom: 8px;
-}
-
-/* SKILL TAGS */
-.tags span {
-  display: inline-block;
-  background: #b30000;
+.skills-container span {
+  background: #ff4d4d;
   padding: 8px 15px;
-  margin: 5px;
   border-radius: 20px;
   font-size: 0.9rem;
+  color: #000;
 }
 
-/* IMAGE */
-.profile-img {
-  width: 260px;
-  border-radius: 20px;
-  border: 4px solid #b30000;
-  display: block;
-  margin: 20px auto;
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.proj-card {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff4d4d;
+}
+
+/* CONTACT */
+.social-links a {
+  margin-right: 15px;
+  color: #ff4d4d;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  color: #aaa;
+  padding: 15px;
   font-size: 0.9rem;
+  color: #aaa;
 }
 
-/* ANIMATION */
+/* FADE-IN */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
+  transform: translateY(25px);
+  transition: 1s ease;
 }
 
 .fade-in.show {

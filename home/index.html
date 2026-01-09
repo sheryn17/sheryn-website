@@ -3,25 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Sheryn Mae Abril | Portfolio</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sheryn Mae Abril">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/rwd.css">
 </head>
 <body>
 
-<!-- BACKGROUND LAYERS -->
+<!-- STRANGER THINGS BACKGROUND -->
 <canvas id="bg-canvas"></canvas>
-<div class="blood-fog"></div>
-<div class="vhs"></div>
-<div class="lightning"></div>
-<div class="vines"></div>
-
-<!-- SOUND -->
-<button id="sound-toggle">🎧 Sound</button>
-<audio id="ambient-sound" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/10/09/audio_3b0f2a3f57.mp3">
-</audio>
 
 <header class="navbar">
   <div class="logo">Sheryn</div>
@@ -38,69 +30,59 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-container glitch">
-    <div>
+  <div class="hero-container">
+
+    <div class="hero-text">
       <h1>Hello, I'm <span>Sheryn Mae Abril</span></h1>
       <p class="typing"></p>
+
       <p class="hero-desc">
-        Computer Science student with a strong interest in
-        <strong>Cyber Security</strong> and
-        <strong>Digital Forensics</strong>.
+        A passionate Computer Science student with strong interest in
+        <strong>Cyber Security</strong>, <strong>Digital Forensics</strong>,
+        and modern web technologies.
       </p>
+
       <a href="#contact" class="btn">Get In Touch</a>
     </div>
 
     <div class="hero-image">
       <img src="https://i.ibb.co/hJ6vgvMR/profile.jpg" alt="Sheryn Mae Abril">
     </div>
+
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section fade-in">
   <div class="card">
     <h2>About Me</h2>
-
     <p>
-      I am <strong>Sheryn Mae Abril</strong>, a dedicated
-      <strong>Computer Science student</strong> specializing in
-      <strong>Cyber Security and Digital Forensics</strong>.
-      I am deeply curious about how systems operate, how vulnerabilities
-      are discovered, and how digital evidence can be analyzed.
+      I am currently pursuing a Bachelor of Science in Computer Science,
+      specializing in <strong>Cyber Security and Digital Forensics</strong>.
     </p>
-
     <p>
-      My goal is to become a cybersecurity professional who contributes to
-      securing systems, investigating incidents, and ensuring the safety
-      of digital environments.
+      My goal is to become a skilled security professional who can help
+      protect systems and users.
     </p>
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education" class="section fade-in">
   <div class="card">
     <h2>Education</h2>
-
-    <h3>Bachelor of Science in Computer Science</h3>
-    <span>Specialization: Cyber Security & Digital Forensics</span>
-
-    <ul>
-      <li>Programming and Software Development</li>
-      <li>Computer Networks and Internet Technologies</li>
-      <li>Cyber Security Principles</li>
-      <li>Digital Forensics Fundamentals</li>
-      <li>Linux and Operating Systems</li>
-    </ul>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Bachelor of Science in Computer Science</h3>
+        <span>Cyber Security & Digital Forensics</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="section fade-in">
   <div class="card">
     <h2>Technical Skills</h2>
 
-    <h4>Programming & Web Development</h4>
+    <h4>Programming</h4>
     <div class="skills">
       <span>HTML</span>
       <span>CSS</span>
@@ -109,71 +91,40 @@
       <span>Java</span>
     </div>
 
-    <p>
-      Experience building responsive websites and interactive interfaces
-      using modern web technologies.
-    </p>
-
-    <h4>Cyber Security & Digital Forensics</h4>
+    <h4>Cyber Security</h4>
     <div class="skills">
-      <span>Basic Networking</span>
-      <span>Linux Fundamentals</span>
+      <span>Linux</span>
+      <span>Networking</span>
+      <span>Digital Forensics</span>
       <span>Security Awareness</span>
-      <span>Digital Forensics Basics</span>
-      <span>Threat Identification</span>
     </div>
-
-    <p>
-      Familiar with security concepts, safe computing practices,
-      and introductory forensic investigation techniques.
-    </p>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="section fade-in">
   <div class="card">
     <h2>Projects</h2>
 
     <div class="projects">
       <div class="project-card">
-        <h3>Personal Portfolio Website</h3>
-        <p>
-          A responsive portfolio website featuring animations,
-          interactive effects, and a cinematic Stranger Things theme.
-        </p>
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal website.</p>
       </div>
-
       <div class="project-card">
-        <h3>Cyber Security Practice Labs</h3>
-        <p>
-          Hands-on exercises exploring security fundamentals,
-          networking concepts, and system protection.
-        </p>
+        <h3>Cyber Security Labs</h3>
+        <p>Hands-on security experiments.</p>
       </div>
-
       <div class="project-card">
-        <h3>Python Mini Projects</h3>
-        <p>
-          Small Python programs focused on automation,
-          logic building, and problem-solving.
-        </p>
+        <h3>Python Scripts</h3>
+        <p>Automation & logic projects.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section fade-in">
   <div class="card">
     <h2>Contact</h2>
-
-    <p>
-      I am open to learning opportunities, collaborations,
-      and discussions related to cyber security, digital forensics,
-      and technology.
-    </p>
-
     <div class="contact-links">
       <a href="#">GitHub</a>
       <a href="#">LinkedIn</a>

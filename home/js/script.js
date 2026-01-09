@@ -97,3 +97,10 @@ window.addEventListener("resize", () => {
 init();
 animate();
 
+// Blood fog opacity changes on scroll
+const bloodFog = document.querySelector('.blood-fog');
+
+window.addEventListener('scroll', () => {
+  const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  bloodFog.style.opacity = Math.min(scrollPercent * 1.2, 0.7); // max 0.7
+});

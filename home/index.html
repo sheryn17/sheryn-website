@@ -11,6 +11,19 @@
 </head>
 <body>
 
+<!-- BACKGROUND LAYERS -->
+<canvas id="bg-canvas"></canvas>
+<div class="blood-fog"></div>
+<div class="vhs"></div>
+<div class="lightning"></div>
+<div class="vines"></div>
+
+<!-- SOUND -->
+<button id="sound-toggle">🎧 Sound</button>
+<audio id="ambient-sound" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/10/09/audio_3b0f2a3f57.mp3">
+</audio>
+
 <header class="navbar">
   <div class="logo">Sheryn</div>
   <nav>
@@ -19,6 +32,7 @@
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
     <a href="#goals">Career Goals</a>
+    <a href="#interests">Interests</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -28,7 +42,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-container">
+  <div class="hero-container glitch">
     <div class="hero-text">
       <h1>Hello, I'm <span>Sheryn Mae Abril</span></h1>
       <p class="typing"></p>
@@ -54,24 +68,23 @@
     <h2>About Me</h2>
 
     <p>
-      I am <strong>Sheryn Mae Abril</strong>, a dedicated
+      I am <strong>Sheryn Mae Abril</strong>, a passionate
       <strong>Computer Science student</strong> specializing in
       <strong>Cyber Security and Digital Forensics</strong>.
-      I am deeply interested in understanding how digital systems function,
-      how security vulnerabilities arise, and how cyber incidents are analyzed.
+      I am deeply interested in understanding how digital systems work,
+      how vulnerabilities arise, and how cyber incidents are investigated.
     </p>
 
     <p>
-      Throughout my academic journey, I have developed a solid foundation in
-      programming, networking, operating systems, and security principles.
-      I enjoy exploring both the defensive and investigative aspects of cyber security,
-      especially in real-world inspired scenarios.
+      Alongside my technical interests, I value balance and creativity.
+      I enjoy exploring different perspectives — whether through learning
+      new technologies or discovering stories through films and series.
     </p>
 
     <p>
-      I am driven by curiosity, continuous learning, and a strong desire to
-      contribute to protecting digital systems and users in an increasingly
-      technology-dependent world.
+      I believe that curiosity, adaptability, and continuous learning
+      are essential both in technology and in life, and I strive to grow
+      in both my professional and personal pursuits.
     </p>
   </div>
 </section>
@@ -113,11 +126,6 @@
       <span>Java</span>
     </div>
 
-    <p>
-      Experience building responsive websites, interactive interfaces,
-      and small-scale applications using clean and structured code.
-    </p>
-
     <h4>Cyber Security & Digital Forensics</h4>
     <div class="skills">
       <span>Basic Networking</span>
@@ -126,11 +134,6 @@
       <span>Digital Forensics Basics</span>
       <span>Threat Identification</span>
     </div>
-
-    <p>
-      Familiar with security concepts such as system vulnerabilities,
-      safe computing practices, and introductory forensic investigation techniques.
-    </p>
   </div>
 </section>
 
@@ -147,46 +150,27 @@
     <ul>
       <li>
         <strong>Introduction to Cyber Security</strong> – Cisco Networking Academy  
-        <br>
-        <small>
-          Covered cyber threats, online safety, attack types, and the importance
-          of protecting personal and organizational data.
-        </small>
+        <br><small>Cyber threats, online safety, attack types, and data protection.</small>
       </li>
 
       <li>
         <strong>Cyber Security Essentials</strong> – Cisco Networking Academy  
-        <br>
-        <small>
-          Focused on core security principles, attack vectors, basic defense strategies,
-          and real-world cyber security scenarios.
-        </small>
+        <br><small>Core security principles, attack vectors, defense strategies, and real-world scenarios.</small>
       </li>
 
       <li>
-        <strong>Linux Fundamentals</strong> – Self-Study & Practice Labs  
-        <br>
-        <small>
-          Hands-on experience with Linux command-line usage, file systems,
-          permissions, and system navigation.
-        </small>
+        <strong>Linux Fundamentals</strong> – Self-Study & Labs  
+        <br><small>Command-line usage, file systems, permissions, and system navigation.</small>
       </li>
 
       <li>
         <strong>Digital Forensics Fundamentals</strong> – Academic Coursework  
-        <br>
-        <small>
-          Introduction to evidence collection, preservation, analysis techniques,
-          and ethical considerations in digital investigations.
-        </small>
+        <br><small>Evidence collection, preservation, analysis techniques, and ethical considerations.</small>
       </li>
     </ul>
 
     <p>
-      <em>
-        Currently expanding my knowledge through additional labs and preparing
-        for beginner-level industry certifications such as CompTIA Security+.
-      </em>
+      <em>Currently expanding knowledge through labs and preparing for CompTIA Security+ certification.</em>
     </p>
   </div>
 </section>
@@ -197,22 +181,114 @@
     <h2>🧠 Career Goals</h2>
 
     <p>
-      My primary career objective is to build a professional career in
+      My primary objective is to build a professional career in
       <strong>Cyber Security</strong> and <strong>Digital Forensics</strong>,
-      where I can contribute to securing systems, investigating cyber incidents,
+      contributing to securing systems, investigating incidents,
       and protecting sensitive data.
     </p>
 
-    <p><strong>Short-term goals include:</strong></p>
+    <p><strong>Short-term goals:</strong></p>
     <ul>
-      <li>Strengthening my technical foundation in cyber security and networking</li>
-      <li>Gaining hands-on experience through internships and practical labs</li>
-      <li>Developing strong problem-solving and analytical skills</li>
-      <li>Earning entry-level, industry-recognized certifications</li>
+      <li>Strengthen technical foundation in cyber security and networking</li>
+      <li>Gain hands-on experience through internships and practical labs</li>
+      <li>Develop analytical and problem-solving skills</li>
+      <li>Earn entry-level industry-recognized certifications</li>
     </ul>
 
     <p><strong>Long-term career aspirations:</strong></p>
     <ul>
       <li>Cyber Security Analyst</li>
       <li>Digital Forensics Investigator</li>
-      <li>Security
+      <li>Security Operations Center (SOC) Analyst</li>
+    </ul>
+
+    <p>
+      Committed to continuous learning, adapting to emerging threats,
+      and staying updated with modern security technologies and practices.
+    </p>
+  </div>
+</section>
+
+<!-- HOBBIES & INTERESTS -->
+<section id="interests" class="section fade-in">
+  <div class="card">
+    <h2>🌱 Hobbies & Interests</h2>
+
+    <p>
+      Beyond technology and academics, I enjoy activities that help me
+      relax, stay inspired, and continuously learn from the world.
+    </p>
+
+    <ul>
+      <li>🎬 <strong>Movies & Series</strong> — Romantic comedies, K-dramas, and various TV series, appreciating storytelling and emotion.</li>
+      <li>🌅 <strong>Sunsets & Beaches</strong> — Finding peace and inspiration in natural beauty.</li>
+      <li>✈️ <strong>Traveling</strong> — Exploring different places, cultures, and gaining new perspectives.</li>
+      <li>📚 <strong>Learning New Things</strong> — Staying curious and continuously expanding my knowledge.</li>
+    </ul>
+
+    <p>
+      These interests nurture creativity, balance, and a positive mindset,
+      qualities I bring into both my personal life and technical work.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section fade-in">
+  <div class="card">
+    <h2>Projects</h2>
+
+    <div class="projects">
+      <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>
+          Responsive portfolio built using HTML, CSS, and JavaScript,
+          with animations and cinematic interactive effects.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Cyber Security Practice Labs</h3>
+        <p>
+          Hands-on labs exploring security fundamentals,
+          networking, and system protection techniques.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Python Mini Projects</h3>
+        <p>
+          Python scripts focused on automation, logic, and problem-solving.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section fade-in">
+  <div class="card">
+    <h2>Contact</h2>
+
+    <p>
+      I am open to internships, collaborations, and learning opportunities
+      related to cyber security, digital forensics, and technology.
+    </p>
+
+    <div class="contact-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="mailto:youremail@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Sheryn Mae Abril • All Rights Reserved</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

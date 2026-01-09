@@ -214,23 +214,56 @@ footer {
   overflow: hidden;
 }
 
-/* Logo Animation */
-.logo-preloader {
-  font-size: 6rem;
-  font-weight: bold;
-  color: var(--accent);
-  animation: fadeInScale 2s forwards, glitch 0.5s infinite;
-  text-shadow: 0 0 20px rgba(255, 77, 77, 0.6);
+/* Hexagon Container */
+.logo-hexagon {
+  width: 120px;
+  height: 104px; /* height = width * sqrt(3)/2 */
+  position: relative;
 }
 
-/* Fade in and scale */
+/* Hexagon Shape */
+.hexagon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  clip-path: polygon(
+    25% 0%, 75% 0%,
+    100% 50%, 75% 100%,
+    25% 100%, 0% 50%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInScale 2s forwards, glitch 0.5s infinite;
+  text-shadow: 0 0 15px rgba(255,77,77,0.6);
+}
+
+/* Logo Letter S */
+.logo-letter {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--bg-dark); /* contrast inside hexagon */
+}
+
+/* Fade in and scale animation for hexagon */
 @keyframes fadeInScale {
   0% { opacity: 0; transform: scale(0.5); }
   50% { opacity: 1; transform: scale(1.2); }
   100% { opacity: 0; transform: scale(1); }
 }
 
-/* VHS/Glitch lines on preloader */
+/* Glitch animation for hexagon */
+@keyframes glitch {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* VHS noise */
 .preloader-vhs {
   position: absolute;
   width: 100%;
@@ -247,6 +280,12 @@ footer {
   animation: vhsNoise 0.15s infinite;
 }
 
+@keyframes vhsNoise {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { transform: translateY(-2px); opacity: 0.4; }
+  100% { transform: translateY(1px); opacity: 0.2; }
+}
+
 /* Lightning flash */
 .preloader-lightning {
   position: absolute;
@@ -261,24 +300,6 @@ footer {
   animation: flashAnim 0.2s ease-in-out forwards;
 }
 
-/* Glitch animation for logo */
-@keyframes glitch {
-  0% { transform: translate(0, 0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(-1px, 1px); }
-  80% { transform: translate(1px, -1px); }
-  100% { transform: translate(0, 0); }
-}
-
-/* VHS noise animation */
-@keyframes vhsNoise {
-  0% { transform: translateY(0); opacity: 0.2; }
-  50% { transform: translateY(-2px); opacity: 0.4; }
-  100% { transform: translateY(1px); opacity: 0.2; }
-}
-
-/* Lightning flash keyframes */
 @keyframes flashAnim {
   0% { background: rgba(255,255,255,0); }
   50% { background: rgba(255,255,255,0.8); }

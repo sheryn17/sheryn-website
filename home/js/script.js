@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
 
   // Lightning flashes randomly while preloader is visible
   function lightningFlash() {
-    const delay = Math.random() * 400 + 200; // 0.2 - 0.6s
+    const delay = Math.random() * 400 + 200;
     setTimeout(() => {
       lightning.classList.add('flash');
       setTimeout(() => lightning.classList.remove('flash'), 200);
@@ -14,13 +14,11 @@ window.addEventListener('load', () => {
   }
   lightningFlash();
 
-  // Hide preloader after 2s (matches fadeInScale animation)
+  // Hide preloader after 2s
   setTimeout(() => {
     preloader.style.opacity = 0;
-    setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 800);
-  }, 2000); // 2 seconds
+    setTimeout(() => preloader.style.display = 'none', 800);
+  }, 2000);
 });
 
 /* FADE IN */

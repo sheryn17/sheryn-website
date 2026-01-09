@@ -97,15 +97,3 @@ window.addEventListener("resize", () => {
 init();
 animate();
 
-// Generate random floating movie reels
-const interestsSection = document.getElementById('interests');
-
-for (let i = 0; i < 10; i++) {
-  const reel = document.createElement('div');
-  reel.classList.add('floating-reel');
-  reel.style.left = Math.random() * 90 + '%';
-  reel.style.animationDuration = 15 + Math.random() * 10 + 's';
-  reel.style.width = 30 + Math.random() * 20 + 'px';
-  reel.style.height = reel.style.width;
-  interestsSection.appendChild(reel);
-}

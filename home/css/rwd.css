@@ -286,21 +286,30 @@ footer {
 }
 
 /* Sidebar General Styling */
-.side-socials, .side-email {
+.side-socials {
   position: fixed;
   bottom: 0;
+  left: 40px; /* Adjust this to move it further from the edge */
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 100;
+  z-index: 999; /* Ensures it stays on top */
 }
 
-.side-socials {
-  left: 40px; /* Adjust distance from left edge */
+.side-socials a {
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Makes icons larger */
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+
+.side-socials a:hover {
+  color: var(--accent);
+  transform: translateY(-5px);
 }
 
 .side-email {
-  right: 40px; /* Adjust distance from right edge */
+  right: 60px; /* Adjust distance from right edge */
 }
 
 /* Links & Icons Styling */

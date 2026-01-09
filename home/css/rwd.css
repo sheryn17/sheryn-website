@@ -285,37 +285,39 @@ footer {
   100% { transform: translateY(1px); opacity: 0.2; }
 }
 
-/* Social icons left */
+/* Social icons on the left */
 .social-left {
-  position: fixed;
-  left: 20px;
-  top: 50%;
+  position: fixed;       /* stays in place while scrolling */
+  left: 20px;            /* distance from left edge */
+  top: 50%;              /* vertically center */
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 15px;             /* spacing between icons */
+  z-index: 1000;         /* above content */
 }
 
 .social-left a {
-  color: #00ffcc;
-  font-size: 1.5rem;
+  color: #00ffcc;        /* cyber-style color */
+  font-size: 1.5rem;     /* icon size */
   transition: 0.3s;
 }
 
 .social-left a:hover {
-  color: #fff;
+  color: #fff;           /* change color on hover */
 }
 
-/* Email right */
+/* Email on the right */
 .email-right {
   position: fixed;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg);
+  right: 20px;           /* distance from right edge */
+  top: 50%;              /* vertically center */
+  transform: translateY(-50%) rotate(90deg); /* rotate to vertical */
   writing-mode: vertical-rl;
   font-family: 'Courier New', monospace;
   color: #00ffcc;
   letter-spacing: 1px;
+  z-index: 1000;
 }
 
 .email-right a {

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sheryn Mae Abril | Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Sheryn Mae Abril | Cyber Security Portfolio</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Sheryn Mae Abril, a Computer Science student specializing in Cyber Security and Digital Forensics.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sheryn Mae Abril - Computer Science student specializing in Cyber Security and Digital Forensics. Portfolio showcasing skills, projects, and career goals." />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,12 +14,12 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/rwd.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">Sheryn</div>
-  <nav>
+  <nav aria-label="Main Navigation">
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
@@ -32,8 +33,13 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Hi, I'm <span>Sheryn Mae Abril</span></h1>
+  <h1>Hi, I’m <span>Sheryn Mae Abril</span></h1>
   <p class="typing"></p>
+
+  <div class="hero-buttons">
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="#contact" class="btn outline">Contact Me</a>
+  </div>
 </section>
 
 <!-- ABOUT -->
@@ -41,14 +47,14 @@
   <div class="card">
     <h2>About Me</h2>
     <p>
-      I am a Bachelor of Science in Computer Science student specializing in
-      <strong>Cyber Security and Digital Forensics</strong>. I am passionate about
-      protecting systems, understanding cyber threats, and exploring how technology
-      can be used to secure digital information.
+      I am a <strong>Computer Science student</strong> specializing in
+      <strong>Cyber Security and Digital Forensics</strong>.
+      I am passionate about protecting systems, analyzing threats,
+      and securing digital information.
     </p>
     <p>
-      I enjoy hands-on learning, experimenting with virtual environments, and
-      continuously improving my programming and security skills.
+      I enjoy hands-on learning, experimenting with virtual environments,
+      and continuously improving my programming and security skills.
     </p>
   </div>
 </section>
@@ -61,8 +67,10 @@
     <h2>Education</h2>
     <p><strong>Bachelor of Science in Computer Science</strong></p>
     <p>Specialization: Cyber Security and Digital Forensics</p>
-    <p>Currently studying core subjects such as programming, data structures,
-       operating systems, networking, and cyber security fundamentals.</p>
+    <p>
+      Focused on programming, data structures, operating systems,
+      networking, and cybersecurity fundamentals.
+    </p>
   </div>
 </section>
 
@@ -82,18 +90,18 @@
       <span>JavaScript</span>
     </div>
 
-    <h3>Cyber Security Tools</h3>
+    <h3>Cyber Security</h3>
     <div class="skills">
-      <span>Oracle VirtualBox</span>
       <span>Linux Basics</span>
-      <span>Network Fundamentals</span>
-      <span>Cyber Security Labs</span>
+      <span>Networking</span>
+      <span>Oracle VirtualBox</span>
+      <span>Security Labs</span>
     </div>
 
-    <h3>Software & Tools</h3>
+    <h3>Tools</h3>
     <div class="skills">
-      <span>VS Code</span>
       <span>Git & GitHub</span>
+      <span>VS Code</span>
       <span>Windows OS</span>
     </div>
 
@@ -115,48 +123,47 @@
     <h2>Projects</h2>
 
     <div class="projects">
-      <div class="project-card">
+      <article class="project-card">
         <h3>Cyber Security Virtual Labs</h3>
         <p>
-          Conducted hands-on cyber security practice using Oracle VirtualBox.
-          Simulated virtual machines to understand system vulnerabilities,
-          network configurations, and basic security testing.
+          Built and tested virtual machines using Oracle VirtualBox to
+          analyze system vulnerabilities and practice security testing.
         </p>
-      </div>
+      </article>
 
-      <div class="project-card">
+      <article class="project-card">
         <h3>Java Programming Projects</h3>
         <p>
-          Developed console-based Java programs including calculators,
-          data processing applications, and basic object-oriented systems
-          to strengthen problem-solving skills.
+          Developed console-based Java applications applying
+          object-oriented programming and logical problem solving.
         </p>
-      </div>
+      </article>
 
-      <div class="project-card">
+      <article class="project-card">
         <h3>Python Automation Scripts</h3>
         <p>
-          Created beginner-friendly Python scripts for file handling,
-          automation tasks, and simple tools to improve productivity.
+          Created beginner automation scripts for file handling,
+          productivity tasks, and system utilities.
         </p>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CAREER GOALS -->
+<!-- GOALS -->
 <section id="goals" class="section fade-in">
   <div class="card">
     <h2>Career Goals</h2>
     <p>
-      My goal is to become a skilled <strong>Cyber Security Professional</strong>
-      specializing in threat detection, digital forensics, and system protection.
+      My goal is to become a <strong>Cyber Security Professional</strong>
+      specializing in threat detection, digital forensics,
+      and system protection.
     </p>
     <p>
-      I aim to continuously learn new security technologies, earn certifications,
-      and contribute to creating safer digital environments.
+      I aim to earn industry certifications and contribute to
+      creating safer digital environments.
     </p>
   </div>
 </section>
@@ -167,7 +174,7 @@
 <section id="contact" class="section fade-in">
   <div class="card">
     <h2>Contact</h2>
-    <p>You may reach me through the following platforms:</p>
+    <p>Let’s connect for opportunities or collaborations.</p>
 
     <div class="contact-links">
       <a href="https://github.com/yourusername" target="_blank">GitHub</a>
@@ -186,5 +193,6 @@
 <script src="js/script.js"></script>
 </body>
 </html>
+
 
 

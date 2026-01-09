@@ -182,3 +182,21 @@ footer {
   }
 }
 
+.vines {
+  position: fixed;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: url('https://i.ibb.co/7XGk6Jv/vines.png') repeat-y;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.2;
+  animation: vineCreep 60s linear infinite;
+}
+
+@keyframes vineCreep {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-50%); }
+}

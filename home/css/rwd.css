@@ -285,3 +285,57 @@ footer {
   100% { transform: translateY(1px); opacity: 0.2; }
 }
 
+/* Sidebar General Styling */
+.side-socials, .side-email {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.side-socials {
+  left: 40px; /* Adjust distance from left edge */
+}
+
+.side-email {
+  right: 40px; /* Adjust distance from right edge */
+}
+
+/* Links & Icons Styling */
+.side-socials a, .side-email a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace; /* Monospace looks great for Cyber Security */
+}
+
+/* Rotate the Email Text */
+.side-email a {
+  writing-mode: vertical-rl;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Hover Effects */
+.side-socials a:hover, .side-email a:hover {
+  color: var(--accent);
+  transform: translateY(-5px);
+}
+
+/* The Decorative Vertical Line */
+.vertical-line {
+  width: 1px;
+  height: 90px;
+  background-color: var(--text-muted);
+}
+
+/* Hide on Mobile - Very Important! */
+@media (max-width: 1024px) {
+  .side-socials, .side-email {
+    display: none;
+  }
+}

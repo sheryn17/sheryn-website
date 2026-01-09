@@ -207,7 +207,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   z-index: 9999;
   opacity: 1;
   transition: opacity 0.8s ease;
@@ -217,7 +216,7 @@ footer {
 /* Hexagon Container */
 .logo-hexagon {
   width: 120px;
-  height: 104px; /* height = width * sqrt(3)/2 */
+  height: 104px; /* width * sqrt(3)/2 */
   position: relative;
 }
 
@@ -239,21 +238,21 @@ footer {
   text-shadow: 0 0 15px rgba(255,77,77,0.6);
 }
 
-/* Logo Letter S */
+/* Logo Letter */
 .logo-letter {
   font-size: 4rem;
   font-weight: bold;
-  color: var(--bg-dark); /* contrast inside hexagon */
+  color: var(--bg-dark);
 }
 
-/* Fade in and scale animation for hexagon */
+/* Fade in and scale */
 @keyframes fadeInScale {
   0% { opacity: 0; transform: scale(0.5); }
   50% { opacity: 1; transform: scale(1.2); }
   100% { opacity: 0; transform: scale(1); }
 }
 
-/* Glitch animation for hexagon */
+/* Glitch animation */
 @keyframes glitch {
   0% { transform: translate(0, 0); }
   20% { transform: translate(-2px, 2px); }
@@ -284,24 +283,4 @@ footer {
   0% { transform: translateY(0); opacity: 0.2; }
   50% { transform: translateY(-2px); opacity: 0.4; }
   100% { transform: translateY(1px); opacity: 0.2; }
-}
-
-/* Lightning flash */
-.preloader-lightning {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0);
-  mix-blend-mode: lighten;
-  z-index: 2;
-}
-
-.preloader-lightning.flash {
-  animation: flashAnim 0.2s ease-in-out forwards;
-}
-
-@keyframes flashAnim {
-  0% { background: rgba(255,255,255,0); }
-  50% { background: rgba(255,255,255,0.8); }
-  100% { background: rgba(255,255,255,0); }
 }

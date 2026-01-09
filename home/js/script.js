@@ -1,24 +1,11 @@
-// Preloader
+// Preloader hide after animation
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
-  const lightning = document.querySelector('.preloader-lightning');
 
-  // Lightning flashes randomly while preloader is visible
-  function lightningFlash() {
-    const delay = Math.random() * 400 + 200;
-    setTimeout(() => {
-      lightning.classList.add('flash');
-      setTimeout(() => lightning.classList.remove('flash'), 200);
-      if (preloader.style.opacity !== '0') lightningFlash();
-    }, delay);
-  }
-  lightningFlash();
-
-  // Hide preloader after 2s
   setTimeout(() => {
     preloader.style.opacity = 0;
     setTimeout(() => preloader.style.display = 'none', 800);
-  }, 2000);
+  }, 2000); // matches fadeInScale duration
 });
 
 /* FADE IN */

@@ -1,3 +1,28 @@
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  const lightning = document.querySelector('.preloader-lightning');
+
+  // Lightning flashes randomly while preloader is visible
+  function lightningFlash() {
+    const delay = Math.random() * 400 + 200; // 0.2 - 0.6s
+    setTimeout(() => {
+      lightning.classList.add('flash');
+      setTimeout(() => lightning.classList.remove('flash'), 200);
+      if (preloader.style.opacity !== '0') lightningFlash();
+    }, delay);
+  }
+  lightningFlash();
+
+  // Hide preloader after 2s (matches fadeInScale animation)
+  setTimeout(() => {
+    preloader.style.opacity = 0;
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 800);
+  }, 2000); // 2 seconds
+});
+
 /* FADE IN */
 const sections = document.querySelectorAll('.fade-in');
 

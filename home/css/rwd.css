@@ -286,63 +286,58 @@ footer {
 }
 
 /* Sidebar General Styling */
-.side-socials {
+.side-socials, .side-email {
   position: fixed;
   bottom: 0;
-  left: 40px; /* Adjust this to move it further from the edge */
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 999; /* Ensures it stays on top */
+  z-index: 1000;
 }
 
-.side-socials a {
-  margin-bottom: 20px;
-  font-size: 1.5rem; /* Makes icons larger */
-  color: var(--text-muted);
-  transition: 0.3s;
-}
-
-.side-socials a:hover {
-  color: var(--accent);
-  transform: translateY(-5px);
+.side-socials {
+  left: 40px; /* Distance from left edge */
 }
 
 .side-email {
-  right: 60px; /* Adjust distance from right edge */
+  right: 40px; /* Distance from right edge */
 }
 
-/* Links & Icons Styling */
-.side-socials a, .side-email a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 1.2rem;
+/* Social Icons (Left) */
+.side-socials a {
+  font-size: 1.1rem; /* Smaller, more delicate icons */
   margin-bottom: 20px;
-  transition: all 0.3s ease;
-  font-family: 'Courier New', monospace; /* Monospace looks great for Cyber Security */
+  color: var(--text-muted);
+  transition: 0.3s ease;
 }
 
-/* Rotate the Email Text */
+/* Vertical Email (Right) */
 .side-email a {
   writing-mode: vertical-rl;
-  font-size: 0.85rem;
-  letter-spacing: 0.1rem;
+  font-size: 0.8rem; /* Small, clean text */
+  letter-spacing: 0.15rem; /* Increased spacing for that professional look */
+  margin-bottom: 20px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
 }
 
 /* Hover Effects */
 .side-socials a:hover, .side-email a:hover {
   color: var(--accent);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
-/* The Decorative Vertical Line */
+/* The Vertical Lines */
 .vertical-line {
   width: 1px;
-  height: 90px;
+  height: 100px; /* Standard length from your reference */
   background-color: var(--text-muted);
+  opacity: 0.6; /* Slightly faded to not distract from the icons */
 }
 
-/* Hide on Mobile - Very Important! */
+/* Responsive: Hide on smaller screens */
 @media (max-width: 1024px) {
   .side-socials, .side-email {
     display: none;

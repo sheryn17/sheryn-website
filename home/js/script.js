@@ -12,20 +12,11 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
-// Smooth scroll
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(link.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
-
 // Typing animation
 const texts = [
   "Computer Science Student",
   "Cyber Security Enthusiast",
-  "Future Digital Forensics Specialist"
+  "Future Digital Forensics Expert"
 ];
 
 let textIndex = 0;

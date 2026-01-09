@@ -1,4 +1,3 @@
-// Fade-in animation
 const sections = document.querySelectorAll('.fade-in');
 
 function revealOnScroll() {
@@ -12,29 +11,27 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
-// Typing animation
 const texts = [
   "Computer Science Student",
   "Cyber Security Enthusiast",
-  "Future Digital Forensics Expert"
+  "Digital Forensics Learner"
 ];
 
-let textIndex = 0;
-let charIndex = 0;
+let i = 0;
+let j = 0;
 
 function typeEffect() {
-  const current = texts[textIndex];
   document.querySelector(".typing").textContent =
-    current.slice(0, charIndex++);
+    texts[i].slice(0, j++);
 
-  if (charIndex > current.length) {
+  if (j > texts[i].length) {
     setTimeout(() => {
-      charIndex = 0;
-      textIndex = (textIndex + 1) % texts.length;
+      j = 0;
+      i = (i + 1) % texts.length;
     }, 2000);
   }
 
-  setTimeout(typeEffect, 100);
+  setTimeout(typeEffect, 120);
 }
 
 typeEffect();
